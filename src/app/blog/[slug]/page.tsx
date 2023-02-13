@@ -2,6 +2,13 @@ import { client, getEntries } from "@/lib/contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { notFound } from "next/navigation";
 import Codepen from "../Codepen";
+import { z } from "zod";
+
+const postScheme = z.object({
+  title: z.string(),
+  content: z.any(),
+  codepenHash: z.string(),
+});
 
 async function getBlogPost(slug: string) {
   const blogPost = await client.getEntries({
@@ -17,7 +24,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   if (!query.items[0]) {
     notFound();
   }
-  const blog = query.items[0].fields;
+  const blog = postScheme.parse(query.items[0].fields);
   return (
     <article>
       <h1>{blog.title}</h1>
