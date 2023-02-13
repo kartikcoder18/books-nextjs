@@ -1,20 +1,17 @@
-import { createClient } from "contentful";
+import { client } from "./contentfulClient";
+import { queryScheme } from "./schemes";
 
-if (!process.env.CONTENTFUL_SPACE_ID) {
-  throw new Error("Missing Contentful space id");
-}
+export const getEntries = async (entryType: string) => {
+  const query = await client.getEntries({ content_type: entryType });
+  const result = queryScheme.parse(query);
+  return result;
+};
 
-if (!process.env.CONTENTFUL_ACCESS_TOKEN) {
-  throw new Error("Missing Contentful access token");
-}
-
-const space_id = process.env.CONTENTFUL_SPACE_ID as string;
-const access_token = process.env.CONTENTFUL_ACCESS_TOKEN as string;
-
-export const client = createClient({
-  space: space_id,
-  accessToken: access_token,
-});
-
-export const getEntries = (entryType: string) =>
-  client.getEntries({ content_type: entryType });
+export const getEntryBySlug = async (slug: string, entryType: string) => {
+  const query = await client.getEntries({
+    content_type: entryType,
+    "fields.slug": slug,
+  });
+  const result = queryScheme.parse(query);
+  return result;
+};

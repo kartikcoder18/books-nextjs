@@ -1,10 +1,9 @@
-// @ts-nocheck
 import { getEntries } from "@/lib/contentful";
 import Link from "next/link";
-import { z } from "zod";
 
 export default async function Home() {
   const blogPosts = await getEntries("post");
+  console.dir(blogPosts.items);
   return (
     <main>
       <h1>Hello</h1>
