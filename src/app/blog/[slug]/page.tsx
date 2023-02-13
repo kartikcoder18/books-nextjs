@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 }
 
-// export async function generateStaticParams() {
-//   const posts = await getEntries("post");
-//   return posts.items.map((item) => item.fields);
-// }
+export async function generateStaticParams() {
+  const posts = await getEntries("post");
+  return posts.items.map((item) => item.fields);
+}
