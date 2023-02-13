@@ -26,3 +26,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
     </article>
   );
 }
+
+export async function generateStaticParams() {
+  const posts = await getEntries("post");
+  return posts.items.map((item) => item.fields);
+}
