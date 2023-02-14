@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const postFields = z.object({
+export const bookFields = z.object({
   bookTitle: z.string(),
   author: z.string(),
   recomendation: z.boolean(),
@@ -9,12 +9,12 @@ export const postFields = z.object({
   status: z.any(),
 });
 
-export const postScheme = z.object({
+export const bookScheme = z.object({
   sys: z.object({ id: z.string() }),
-  fields: postFields,
+  fields: bookFields,
 });
 
 export const queryScheme = z.object({
   total: z.number(),
-  items: z.array(postScheme),
+  items: z.array(bookScheme),
 });
