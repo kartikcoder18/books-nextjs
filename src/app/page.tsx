@@ -3,7 +3,6 @@ import Image from "next/image";
 
 export default async function Home() {
   const blogPosts = await getEntries("book");
-  console.dir(blogPosts.items);
   return (
     <main>
       <h1>Books</h1>
