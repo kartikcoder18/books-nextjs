@@ -1,10 +1,12 @@
 import { z } from "zod";
 
 export const postFields = z.object({
-  title: z.string(),
-  content: z.any(),
-  codepenHash: z.string(),
-  slug: z.string(),
+  bookTitle: z.string(),
+  author: z.string(),
+  recomendation: z.boolean(),
+  finished: z.boolean(),
+  coverLink: z.string(),
+  status: z.any(),
 });
 
 export const postScheme = z.object({
