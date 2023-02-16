@@ -16,7 +16,7 @@ export default async function Home() {
               alt=""
               src={item.fields.coverLink}
               width="300"
-              height="400"
+              height="460"
             />
           </li>
         ))}
