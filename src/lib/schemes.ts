@@ -3,10 +3,10 @@ import { z } from "zod";
 export const bookFields = z.object({
   bookTitle: z.string(),
   author: z.string(),
-  recomendation: z.boolean(),
-  finished: z.boolean(),
+  status: z.enum(["Read", "Unread", "Started", "Recommended"]),
   coverLink: z.string(),
-  status: z.any(),
+  highlight: z.any().optional(),
+  publisher: z.string(),
 });
 
 export const bookScheme = z.object({
