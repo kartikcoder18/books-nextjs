@@ -1,17 +1,24 @@
 .book-card {
-  border: 1px solid gray;
   border-radius: 3px;
-  max-width: 280px;
-  padding: 1rem 0.8rem;
-}
-
-.book-card p {
-  margin: 0.6rem 0;
+  background-color: white;
+  width: 260px;
+  padding: 1.2rem 1rem;
+  display: grid;
 }
 
 .book-card h3 {
   font-size: 1.25rem;
   line-height: 1.1;
+}
+
+.book-info p {
+  margin-top: 0.6rem;
+  line-height: 1;
+}
+
+.book-info p + p {
+  margin-top: 0.3rem;
+  margin-bottom: 0.6rem;
 }
 
 .book-details {
@@ -26,6 +33,7 @@
 
 .book-cover {
   position: relative;
+  align-self: self-end;
 }
 
 .book-cover::after {

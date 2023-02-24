@@ -1,3 +1,7 @@
+body {
+  background-color: lightgray;
+}
+
 h1,
 h2,
 h3,
@@ -9,4 +13,10 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
