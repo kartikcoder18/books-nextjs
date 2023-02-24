@@ -4,7 +4,7 @@ import "sanitize.css";
 import "sanitize.css/typography.css";
 
 export default async function Home() {
-  const blogPosts = await getEntries("book");
+  const blogPosts = await getEntries("Fiction");
   return (
     <main>
       <h1>Books</h1>
