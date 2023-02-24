@@ -1,5 +1,7 @@
 import { getEntries } from "@/lib/contentful";
 import BookCard from "./BookCard";
+import "sanitize.css";
+import "sanitize.css/typography.css";
 
 export default async function Home() {
   const blogPosts = await getEntries("book");
