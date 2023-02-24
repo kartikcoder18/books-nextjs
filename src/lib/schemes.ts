@@ -7,7 +7,11 @@ export const bookFields = z.object({
   coverLink: z.string(),
   highlight: z.any().optional(),
   publisher: z.string(),
+  category: z.string(),
+  publishedDate: z.number(),
 });
+
+export type Book = z.infer<typeof bookFields>;
 
 export const bookScheme = z.object({
   sys: z.object({ id: z.string() }),
