@@ -8,6 +8,7 @@ export default async function Home() {
   return (
     <main>
       <h1>Books</h1>
+      <h2>Fiction</h2>
       <ul>
         {blogPosts.items.map((item) => (
           <li key={item.sys.id}>
