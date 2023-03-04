@@ -4,6 +4,8 @@
   width: 260px;
   padding: 1.2rem 1rem;
   display: grid;
+  position: relative;
+  isolation: isolate;
 }
 
 .book-card h3 {
@@ -32,7 +34,6 @@
 }
 
 .book-cover {
-  position: relative;
   align-self: self-end;
 }
 
@@ -45,15 +46,16 @@
   backdrop-filter: brightness(107%);
 }
 
-.book-cover::before {
+.badge {
   position: absolute;
-  width: 42px;
-  height: 42px;
-  content: "";
-  top: -10px;
-  left: -10px;
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  padding: 1.5rem;
+  width: 1em;
+  top: -5%;
+  left: 47%;
   border-radius: 100%;
-  background-color: white;
-  outline: 2px solid green;
-  outline-offset: -4px;
+  z-index: -2;
+  opacity: 0.15;
 }
