@@ -1,5 +1,12 @@
+:root {
+  --card-background: #3b4048;
+  --background: #222831;
+  --foreground: #fcfcfc;
+}
+
 body {
-  background-color: lightgray;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 h1,
