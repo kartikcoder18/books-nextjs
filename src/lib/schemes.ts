@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const bookStatus = z.enum(["Read", "Started", "NotRecommended"]);
+export const bookStatus = z.enum(["Read", "Started", "Recommended"]);
 
 export const bookFields = z.object({
   bookTitle: z.string(),

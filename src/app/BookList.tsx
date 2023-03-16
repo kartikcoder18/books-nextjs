@@ -3,9 +3,9 @@ import { getEntries } from "@/lib/contentful";
 import { BookStatus } from "@/lib/schemes";
 
 const sortOrder: Record<BookStatus, number> = {
-  Read: 0,
-  Started: 1,
-  NotRecommended: 2,
+  Recommended: 0,
+  Read: 1,
+  Started: 2,
 };
 
 export default async function BookList({ name }: { name: string }) {
