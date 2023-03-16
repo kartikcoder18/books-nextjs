@@ -5,7 +5,7 @@ export default function Head() {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"
-        content="A list of all the books I'm reading, read or will read"
+        content="Explore my curated book collection on my bookshelf website, built with Next.js and Contentful CMS. "
       />
       <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       <meta property="og:type" content="website" />
