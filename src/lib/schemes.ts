@@ -8,7 +8,7 @@ export const bookFields = z.object({
   status: bookStatus,
   coverLink: z.string(),
   highlight: z.any().optional(),
-  publisher: z.string(),
+  publisher: z.string().optional(),
   category: z.string(),
   publishedDate: z.number(),
 });
