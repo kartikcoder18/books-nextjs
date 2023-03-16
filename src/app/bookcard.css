@@ -36,6 +36,13 @@
 .book-cover {
   align-self: self-end;
   position: relative;
+  height: 230px;
+  width: 150px;
+}
+
+img {
+  object-fit: cover;
+  object-position: 10% 0;
 }
 
 .book-cover::after {

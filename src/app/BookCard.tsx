@@ -17,7 +17,12 @@ export default function BookCard({ props }: { props: Book }) {
         </p>
       </div>
       <div className="book-cover">
-        <Image alt="" src={props.coverLink} width="150" height="230" />
+        <Image
+          alt=""
+          src={props.coverLink}
+          sizes="(max-width: 768px) 100vw, 10vw"
+          fill={true}
+        />
       </div>
     </li>
   );
