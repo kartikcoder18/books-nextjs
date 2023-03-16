@@ -1,4 +1,5 @@
 import "./globals.css";
+import Intro from "./Intro";
 
 export default function RootLayout({
   children,
@@ -9,8 +10,18 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <h1> Book Lists </h1>
+        <Intro />
         {children}
+        <footer>
+          Made with ☕ by{" "}
+          <a
+            href="https://github.com/ralacerda"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Renato Lacerda
+          </a>
+        </footer>
       </body>
     </html>
   );

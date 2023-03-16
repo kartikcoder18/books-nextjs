@@ -1,0 +1,19 @@
+dl > div {
+  font-size: 1.2rem;
+  display: flex;
+}
+
+dt {
+  display: flex;
+  align-items: center;
+}
+
+dd {
+  margin-left: 0.6rem;
+}
+
+.intro {
+  max-width: 70ch;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
