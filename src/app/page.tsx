@@ -1,19 +1,15 @@
-import { getEntries } from "@/lib/contentful";
-import BookCard from "./BookCard";
 import "sanitize.css";
 import "sanitize.css/typography.css";
+import BookList from "./BookList";
 
 export default async function Home() {
-  const blogPosts = await getEntries("Fiction");
+  const nonFictionList: JSX.Element = await BookList({ name: "Non-fiction" });
+  const fictionList: JSX.Element = await BookList({ name: "Fiction" });
+  const technicalList: JSX.Element = await BookList({ name: "Technical" });
+
   return (
     <main>
-      <h1>Books</h1>
-      <h2>Fiction</h2>
-      <ul className="book-grid">
-        {blogPosts.items.map((item) => (
-          <BookCard props={item.fields} key={item.sys.id} />
-        ))}
-      </ul>
+      {nonFictionList} {fictionList} {technicalList}
     </main>
   );
 }

@@ -9,7 +9,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <h1> My blog</h1>
+        <h1> Book Lists </h1>
         {children}
       </body>
     </html>
