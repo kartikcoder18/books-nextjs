@@ -35,6 +35,7 @@
 
 .book-cover {
   align-self: self-end;
+  position: relative;
 }
 
 .book-cover::after {
@@ -42,6 +43,7 @@
   width: 4px;
   height: 100%;
   content: "";
+  top: 0;
   left: 0;
   backdrop-filter: brightness(107%);
 }
