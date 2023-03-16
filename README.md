@@ -13,7 +13,7 @@ Using these tools, I was able to build a responsive and dynamic website that all
 
 ## Screenshots
 
-[![Screenshot](screenshot.png)]
+![Screenshot](project_screenshot.png)
 
 ## Credits
 
