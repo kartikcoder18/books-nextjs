@@ -4,6 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   images: {
+    minimumCacheTTL: 60,
+    formats: ["image/webp"],
     remotePatterns: [
       {
         protocol: "https",
