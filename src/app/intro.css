@@ -17,3 +17,8 @@ dd {
   line-height: 1.6;
   margin-top: 0.5rem;
 }
+
+.legend p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

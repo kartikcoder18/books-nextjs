@@ -17,6 +17,7 @@ export default function Intro() {
         "Recommended" are not only great in my opinion, but I believe they have
         broad appeal and can bring value to a wide range of readers
       </p>
+      <p>Legend</p>
       <dl>
         <div>
           <dt>
