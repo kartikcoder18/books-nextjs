@@ -22,3 +22,7 @@ dd {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+.legend {
+  margin-top: 1rem;
+}

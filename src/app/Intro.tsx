@@ -17,27 +17,29 @@ export default function Intro() {
         "Recommended" are not only great in my opinion, but I believe they have
         broad appeal and can bring value to a wide range of readers
       </p>
-      <p>Legend</p>
-      <dl>
-        <div>
-          <dt>
-            <Badge status="Recommended" size={20} />
-          </dt>
-          <dd> Recommended</dd>
-        </div>
-        <div>
-          <dt>
-            <Badge status="Read" size={20} />
-          </dt>
-          <dd> Read</dd>
-        </div>
-        <div>
-          <dt>
-            <Badge status="Started" size={20} />
-          </dt>
-          <dd> Started</dd>
-        </div>
-      </dl>
+      <div className="legend">
+        <p>Legend</p>
+        <dl>
+          <div>
+            <dt>
+              <Badge status="Recommended" size={20} />
+            </dt>
+            <dd> Recommended</dd>
+          </div>
+          <div>
+            <dt>
+              <Badge status="Read" size={20} />
+            </dt>
+            <dd> Read</dd>
+          </div>
+          <div>
+            <dt>
+              <Badge status="Started" size={20} />
+            </dt>
+            <dd> Started</dd>
+          </div>
+        </dl>
+      </div>
     </>
   );
 }
